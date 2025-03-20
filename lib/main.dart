@@ -2,6 +2,7 @@ import 'package:animated_icon/features/home/view/home_screen.dart';
 import 'package:animated_icon/features/home/view_modals/business_grid_provider.dart';
 import 'package:animated_icon/features/home/view_modals/grid_provider.dart';
 import 'package:animated_icon/features/home/view_modals/recharge_grid_provider.dart';
+import 'package:animated_icon/features/pagination_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -26,6 +27,9 @@ class MyApp extends StatelessWidget {
 
         /// Recharge grid provider
         ChangeNotifierProvider(create: (context) => RechargeGridProvider()),
+
+        /// pagination provider
+        ChangeNotifierProvider(create: (context) => PaginationProvider()),
       ],
       builder: (context, child) {
         return ScreenUtilInit(
